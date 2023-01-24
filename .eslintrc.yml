@@ -3,8 +3,9 @@
 # https://launchschool.com/gists/9ad96eed
 
 root: true
-parser: babel-eslint
+parser: "@babel/eslint-parser"
 parserOptions:
+  requireConfigFile: false
   ecmaFeatures:
     impliedStrict: true
 env:

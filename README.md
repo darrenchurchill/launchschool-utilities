@@ -2,5 +2,5 @@
 
 ## Install
 ```
-npm install eslint@7.12.1 babel-eslint --save-dev
+npm install eslint @babel/core @babel/eslint-parser --save-dev
 ```
