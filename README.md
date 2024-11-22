@@ -15,7 +15,7 @@ Copy this file into the root of your repository.
 Run:
 
 ```bash
-npm install --save-dev eslint globals @babel/core @babel/eslint-parser
+npm install --save-dev eslint globals @babel/core @babel/eslint-parser @stylistic/eslint-plugin-js
 ```
 
 ### Usage

@@ -6,6 +6,7 @@
 import globals from "globals";
 import babelParser from "@babel/eslint-parser";
 import js from "@eslint/js";
+import stylisticJs from "@stylistic/eslint-plugin-js";
 
 export default [
   js.configs.recommended,
@@ -39,13 +40,17 @@ export default [
       },
     },
 
+    plugins: {
+      "@stylistic/js": stylisticJs,
+    },
+
     rules: {
       "accessor-pairs": "error",
       "array-callback-return": "error",
-      "arrow-spacing": "error",
+      "@stylistic/js/arrow-spacing": "error",
       "block-scoped-var": "error",
 
-      "brace-style": [
+      "@stylistic/js/brace-style": [
         "error",
         "1tbs",
         {
@@ -68,7 +73,7 @@ export default [
         },
       ],
 
-      "indent": [
+      "@stylistic/js/indent": [
         "error",
         2,
         {
@@ -76,11 +81,11 @@ export default [
         },
       ],
 
-      "keyword-spacing": "error",
-      "linebreak-style": "error",
+      "@stylistic/js/keyword-spacing": "error",
+      "@stylistic/js/linebreak-style": "error",
       "max-depth": "error",
 
-      "max-len": [
+      "@stylistic/js/max-len": [
         "error",
         {
           code: 80,
@@ -119,8 +124,8 @@ export default [
         },
       ],
 
-      "max-statements-per-line": "error",
-      "new-parens": "error",
+      "@stylistic/js/max-statements-per-line": "error",
+      "@stylistic/js/new-parens": "error",
       "no-array-constructor": "error",
       "no-async-promise-executor": "error",
       "no-bitwise": "error",
@@ -128,7 +133,7 @@ export default [
       "no-caller": "error",
       "no-class-assign": "error",
 
-      "no-confusing-arrow": [
+      "@stylistic/js/no-confusing-arrow": [
         "error",
         {
           allowParens: true,
@@ -159,10 +164,10 @@ export default [
       "no-lonely-if": "error",
       "no-loop-func": "error",
       "no-misleading-character-class": "error",
-      "no-mixed-operators": "error",
+      "@stylistic/js/no-mixed-operators": "error",
       "no-multi-assign": "error",
       "no-multi-str": "error",
-      "no-multiple-empty-lines": "error",
+      "@stylistic/js/no-multiple-empty-lines": "error",
       "no-nested-ternary": "error",
       "no-new": "error",
       "no-new-func": "error",
@@ -197,11 +202,11 @@ export default [
       "no-self-compare": "error",
       "no-sequences": "error",
       "no-shadow-restricted-names": "error",
-      "no-tabs": "error",
+      "@stylistic/js/no-tabs": "error",
       "no-template-curly-in-string": "error",
       "no-this-before-super": "error",
       "no-throw-literal": "error",
-      "no-trailing-spaces": "error",
+      "@stylistic/js/no-trailing-spaces": "error",
       "no-unmodified-loop-condition": "error",
       "no-unneeded-ternary": "error",
       "no-unused-expressions": "error",
@@ -230,16 +235,16 @@ export default [
       "no-useless-rename": "error",
       "no-useless-return": "error",
       "no-with": "error",
-      "nonblock-statement-body-position": "error",
-      "one-var-declaration-per-line": "error",
+      "@stylistic/js/nonblock-statement-body-position": "error",
+      "@stylistic/js/one-var-declaration-per-line": "error",
       "operator-assignment": "error",
       "prefer-promise-reject-errors": "error",
-      "quote-props": ["error", "consistent-as-needed"],
+      "@stylistic/js/quote-props": ["error", "consistent-as-needed"],
       "radix": "error",
       "require-await": "error",
       "require-yield": "error",
 
-      "semi": [
+      "@stylistic/js/semi": [
         "error",
         "always",
         {
@@ -247,12 +252,12 @@ export default [
         },
       ],
 
-      "semi-spacing": "error",
-      "semi-style": "error",
-      "space-before-blocks": "error",
-      "space-infix-ops": "error",
+      "@stylistic/js/semi-spacing": "error",
+      "@stylistic/js/semi-style": "error",
+      "@stylistic/js/space-before-blocks": "error",
+      "@stylistic/js/space-infix-ops": "error",
 
-      "space-unary-ops": [
+      "@stylistic/js/space-unary-ops": [
         "error",
         {
           words: true,
