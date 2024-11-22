@@ -2,19 +2,51 @@
 # From:
 # https://launchschool.com/gists/9ad96eed
 
+# https://eslint.org/blog/2022/08/new-config-system-part-2
+# https://eslint.org/docs/latest/use/migrate-to-9.0.0
+
+# `root` no longer exists. The new flat config files act as if `root: true` is
+# set.
+# https://eslint.org/docs/latest/use/configure/migration-guide#additional-changes
 root: true
+# Old: https://github.com/babel/babel-eslint?tab=readme-ov-file#additional-parser-configuration
+# New: https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser#additional-parser-configuration
 parser: "@babel/eslint-parser"
+# Old: https://eslint.org/docs/v8.x/use/configure/language-options#specifying-parser-options
+# New: https://eslint.org/docs/latest/use/configure/language-options#specifying-parser-options
 parserOptions:
+  # `parserOptions.requireConfigFile: false` allows babel-eslint to run on
+  # files with no associated Babel config. However, the parser won't parse
+  # experimental syntax without a config file.
   requireConfigFile: false
   ecmaFeatures:
     impliedStrict: true
+# The `env` config defines the globals a file should know about. Therefore, v9
+# combines them with the other `globals` options.
+# Old: https://eslint.org/docs/v8.x/use/configure/language-options
+# New: https://eslint.org/docs/latest/use/configure/migration-guide#eslint-env-configuration-comments
 env:
   browser: true
+  # `es6` removed from v9. In v8, this setting implied parserOptions.ecmaVersion = 6
+  # The v9 defaults include `languageOptions.ecmaVersion: "latest"`
   es6: true
   jest: true
   jquery: true
   node: true
+# `extends` allows inheriting another configuration, including shareable
+# configs.
+# Old: https://eslint.org/docs/v8.x/use/configure/configuration-files#extending-configuration-files
+# Old: https://eslint.org/docs/v8.x/use/configure/configuration-files#using-eslintrecommended
+# New: https://eslint.org/docs/latest/use/configure/migration-guide#predefined-and-shareable-configs
 extends:
+  # `eslint:recommended`'s rules have been updated:
+  # https://eslint.org/docs/latest/use/migrate-to-9.0.0#-eslintrecommended-has-been-updated
+  # - `no-extra-semi` and `no-mixed-spaces-and-tabs` were removed from ESLint core
+  #    and moved to the `@stylistic/eslint-plugin-js` ESLint plugin.
+  #    https://eslint.style/packages/js
+  # - `no-inner-declarations` was removed, but exists here in `rules` below.
+  # - `no-new-symbol` was deprecated in ESLint and replaced with
+  #   `no-new-native-nonconstructor`
   - eslint:recommended
 globals:
   alert: true
