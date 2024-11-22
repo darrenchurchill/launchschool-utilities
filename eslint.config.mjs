@@ -42,7 +42,6 @@ export default [
 
       parser: babelParser,
       ecmaVersion: "latest", // the eslint v9 default
-      sourceType: "commonjs", // to support code using `require()`
 
       parserOptions: {
         requireConfigFile: false,
