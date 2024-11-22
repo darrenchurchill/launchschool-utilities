@@ -1,11 +1,12 @@
 # Utility Files for Launch School Work
 
-## `.eslintrc.yml`
+## `eslint.config.mjs`
 
 ESLint Configuration File for JavaScript linting.
 
-This `.eslintrc.yml` is from [https://launchschool.com/gists/9ad96eed], modified
-slightly to run with ESLint v8.+.
+This `eslint.config.mjs` includes the configuration from Launch School's
+`eslintrc.yml` <https://launchschool.com/gists/9ad96eed>, migrated for
+compatibility with ESLint v9.+.
 
 ### Install
 
@@ -14,7 +15,7 @@ Copy this file into the root of your repository.
 Run:
 
 ```bash
-npm install eslint @babel/core @babel/eslint-parser --save-dev
+npm install --save-dev eslint globals @babel/core @babel/eslint-parser
 ```
 
 ### Usage
