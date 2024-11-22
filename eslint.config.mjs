@@ -66,11 +66,11 @@ export default [
         },
       ],
 
-      camelcase: "error",
-      complexity: "error",
+      "camelcase": "error",
+      "complexity": "error",
       "consistent-return": "error",
       "constructor-super": "error",
-      eqeqeq: "error",
+      "eqeqeq": "error",
 
       "id-length": [
         "error",
@@ -81,7 +81,7 @@ export default [
         },
       ],
 
-      indent: [
+      "indent": [
         "error",
         2,
         {
@@ -248,11 +248,11 @@ export default [
       "operator-assignment": "error",
       "prefer-promise-reject-errors": "error",
       "quote-props": ["error", "consistent-as-needed"],
-      radix: "error",
+      "radix": "error",
       "require-await": "error",
       "require-yield": "error",
 
-      semi: [
+      "semi": [
         "error",
         "always",
         {
