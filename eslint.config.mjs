@@ -166,9 +166,9 @@ export default [
       "no-nested-ternary": "error",
       "no-new": "error",
       "no-new-func": "error",
-      "no-new-object": "error",
       "no-new-require": "error",
-      "no-new-symbol": "error", // TODO: replace w/ no-new-native-nonconstructor
+      "no-object-constructor": "error",
+      "no-new-native-nonconstructor": "error",
       "no-new-wrappers": "error",
       "no-octal-escape": "error",
       "no-process-env": "error",
