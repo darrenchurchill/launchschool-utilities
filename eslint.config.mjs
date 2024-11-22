@@ -7,6 +7,7 @@ import globals from "globals";
 import babelParser from "@babel/eslint-parser";
 import js from "@eslint/js";
 import stylisticJs from "@stylistic/eslint-plugin-js";
+import nodePlugin from "eslint-plugin-n";
 
 export default [
   js.configs.recommended,
@@ -41,6 +42,7 @@ export default [
     },
 
     plugins: {
+      "n": nodePlugin,
       "@stylistic/js": stylisticJs,
     },
 
@@ -129,7 +131,7 @@ export default [
       "no-array-constructor": "error",
       "no-async-promise-executor": "error",
       "no-bitwise": "error",
-      "no-buffer-constructor": "error",
+      "n/no-deprecated-api": "error",
       "no-caller": "error",
       "no-class-assign": "error",
 
@@ -171,13 +173,13 @@ export default [
       "no-nested-ternary": "error",
       "no-new": "error",
       "no-new-func": "error",
-      "no-new-require": "error",
+      "n/no-new-require": "error",
       "no-object-constructor": "error",
       "no-new-native-nonconstructor": "error",
       "no-new-wrappers": "error",
       "no-octal-escape": "error",
-      "no-process-env": "error",
-      "no-process-exit": "error",
+      "n/no-process-env": "error",
+      "n/no-process-exit": "error",
       "no-prototype-builtins": "off",
 
       "no-restricted-syntax": [
